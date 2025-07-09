@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EatWell</string>
+    <string name="navigation_drawer_open">Mở Menu</string>
+    <string name="navigation_drawer_close">Đóng Menu</string>
+    <string name="nav_header_title">EatWell</string>
+    <string name="nav_header_subtitle">Hãy sống thật tốt</string>
+    <string name="nav_header_desc">Menu</string>
+    <string name="action_settings">Cài đặt</string>
+
+    <string name="menu_home">Nhận diện thực phẩm</string>
+    <string name="menu_gallery">Công thức tính Calo</string>
+    <string name="menu_slideshow">Bài báo khoa học</string>
+</resources>
