@@ -27,7 +27,7 @@ class SlideshowFragment : Fragment() {
         webView.webViewClient = WebViewClient()
 
         // Load trang web
-        webView.loadUrl("http://duocphutho.edu.vn/category/khoa-hoc-cong-nghe/")
+        webView.loadUrl("http://duocphutho.edu.vn/van-ban-phap-luat-ve-dinh-duong-an-toan-thuc-pham/")
 
         return root
     }
