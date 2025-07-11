@@ -7,7 +7,8 @@
     <string name="nav_header_desc">Menu</string>
     <string name="action_settings">Cài đặt</string>
 
-    <string name="menu_home">Nhận diện thực phẩm</string>
-    <string name="menu_gallery">Công thức tính Calo</string>
-    <string name="menu_slideshow">Bài báo khoa học</string>
+    <string name="menu_home">Chọn thực phẩm</string>
+    <string name="menu_gallery">Nhận diện thực phẩm</string>
+    <string name="menu_slideshow">Bài báo web</string>
+
 </resources>

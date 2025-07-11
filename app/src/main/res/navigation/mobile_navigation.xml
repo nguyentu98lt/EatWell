@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
+        android:id="@+id/nav_calculator"
+        android:name="com.example.eatwell.ui.calculator.CalculatorFragment"
+        android:label="Tính Calo"
+        tools:layout="@layout/fragment_calculator" />
+
+    <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.eatwell.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
