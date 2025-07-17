@@ -3,12 +3,15 @@
     <string name="navigation_drawer_open">Mở Menu</string>
     <string name="navigation_drawer_close">Đóng Menu</string>
     <string name="nav_header_title">EatWell</string>
-    <string name="nav_header_subtitle">Hãy sống thật tốt</string>
+    <string name="nav_header_subtitle">Hãy trân trọng sức khoẻ của bạn khi còn có thể!</string>
     <string name="nav_header_desc">Menu</string>
     <string name="action_settings">Cài đặt</string>
 
     <string name="menu_home">Chọn thực phẩm</string>
     <string name="menu_gallery">Nhận diện thực phẩm</string>
-    <string name="menu_slideshow">Bài báo web</string>
+    <string name="menu_slideshow">Văn bản pháp luật về DD và ATTP</string>
+    <string name="menu_calculator">Tính Calo</string>
+    <string name="menu_chatbot">Chatbot</string>
+    <string name="menu_contact">Liên hệ</string>
 
 </resources>

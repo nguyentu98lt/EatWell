@@ -1,58 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:baselineAligned="false">
+        android:orientation="vertical">
 
-        <!-- Spinner chọn khoảng tuổi -->
-        <Spinner
-            android:id="@+id/spinner_age_range"
+        <!-- Tiêu đề nhập thông tin -->
+        <TextView
+            android:id="@+id/text_input_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp" />
+            android:text="Nhập thông tin"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
 
-        <!-- RadioGroup giới tính -->
-        <RadioGroup
-            android:id="@+id/radio_gender"
+        <!-- Dòng chứa spinner tuổi, giới tính, spinner bữa -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginEnd="8dp">
+            android:gravity="center_vertical"
+            android:baselineAligned="false"
+            android:layout_marginBottom="16dp">
 
-            <RadioButton
-                android:id="@+id/radio_male"
+            <!-- Spinner chọn khoảng tuổi -->
+            <Spinner
+                android:id="@+id/spinner_age_range"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nam" />
+                android:layout_marginEnd="8dp" />
 
-            <RadioButton
-                android:id="@+id/radio_female"
+            <!-- RadioGroup giới tính -->
+            <RadioGroup
+                android:id="@+id/radio_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nữ" />
-        </RadioGroup>
+                android:orientation="horizontal"
+                android:layout_marginEnd="8dp">
 
-        <!-- Spinner chọn bữa ăn -->
-        <Spinner
-            android:id="@+id/spinner_meal"
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nam" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nữ" />
+            </RadioGroup>
+
+            <!-- Spinner chọn bữa ăn -->
+            <Spinner
+                android:id="@+id/spinner_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Tiêu đề kết quả -->
+        <TextView
+            android:id="@+id/text_result_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp" />
+            android:text="Kết quả"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Dòng chứa kcal và khối lượng -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Kết quả calo -->
+            <TextView
+                android:id="@+id/text_calorie_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kcal: --"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Kết quả khối lượng -->
+            <TextView
+                android:id="@+id/text_weight_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="≈ --- gram"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- Nút xem bảng -->
+        <Button
+            android:id="@+id/btnXemBang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xem bảng dinh dưỡng"
+            android:layout_marginTop="24dp" />
+
+        <!-- Bảng hiển thị CSV -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:shrinkColumns="*" />
+        </HorizontalScrollView>
+
+        <!-- 3 Spinner chọn món ăn -->
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Nút tính calo -->
+        <Button
+            android:id="@+id/btnTinhCalo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tính tổng calo"
+            android:layout_marginTop="8dp" />
 
         <!-- Kết quả calo -->
         <TextView
-            android:id="@+id/text_calorie_result"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtKetQuaCalo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kcal: --"
+            android:text="Tổng calo: --"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/text_comparison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginTop="4dp" />
+
+
+
     </LinearLayout>
-</HorizontalScrollView>
+
+</ScrollView>
